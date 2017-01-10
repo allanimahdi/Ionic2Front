@@ -1,0 +1,46 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+Actualités    </ion-title>
+  </ion-navbar>
+</ion-header>
+ 
+<ion-content padding>
+<ion-list>
+    <ion-item *ngFor="let item of items" (click)="itemClicked($event,item)">
+      <ion-avatar item-left>
+      <!--  <img src="{{item.picture.thumbnail}}"> -->
+      </ion-avatar>
+    <!--   <h2>{{item.category.name}}</h2>
+
+      <h1>{{item.name}}</h1>
+      <h3>publié le {{item.publication_year}}</h3>
+-->
+
+      <ion-icon *ngIf="item.gender=='female'" name="woman" item-left></ion-icon>
+      <ion-icon *ngIf="item.gender=='male'" name="man" item-left></ion-icon>
+ 
+      
+       <!-- <button ion-button clear item-right (click)="viewItem(item)">View</button> -->
+<div class="image">
+<a (click)="viewItem(item)"> 
+<img src="{{item.image}}">
+</a>
+<h2>{{item.category.name}}</h2>
+
+      <h1>{{item.name}}</h1>
+      <h3>publié le {{item.publication_year}}</h3>
+</div>
+
+
+
+    <!--  <ion-icon name="heart" item-right></ion-icon>
+
+
+
+      <button ion-button item-right color="danger" (click)="buttonClick($event)">Button</button>
+ -->
+    </ion-item>
+ 
+  </ion-list>
+</ion-content>

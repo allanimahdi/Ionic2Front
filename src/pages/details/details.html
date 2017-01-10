@@ -1,0 +1,43 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      {{item.name}}
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+    <ion-card>
+<img src="{{item.image}}">
+              <ion-card-content>
+            <ion-card-title>
+                {{item.name}}
+            </ion-card-title>
+           <ion-list>
+               <ion-item>
+                    Auteur
+                   <ion-note item-right>
+                       {{item.author}}
+                   </ion-note>
+               </ion-item>
+
+               <ion-item>
+                   Date de publication
+                   <ion-note item-right>
+                       {{item.publication_year}}
+                   </ion-note>
+               </ion-item>
+
+               <ion-item> 
+                   Description
+                   <ion-note item-right>
+                       <p>{{item.description}}<p>
+                   </ion-note>
+               </ion-item>
+           </ion-list>
+            <button ion-button (click)="facebookShare()">Partager sur Facebook</button>
+
+        </ion-card-content>
+
+    </ion-card>
+</ion-content>
